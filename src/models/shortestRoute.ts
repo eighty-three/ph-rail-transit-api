@@ -67,8 +67,10 @@ const shortestPath = (graph: IGraph, start: string, end: string): IResult => {
     if (paths[track]) endPath.push(paths[track]);
     track = paths[track];
   }
+  
+  const roundedDistance = Math.round((distance[end] + Number.EPSILON) * 100)/100;
 
-  return {distance: distance[end], paths: endPath.reverse().concat(end)};
+  return {distance: roundedDistance, paths: endPath.reverse().concat(end)};
 };
 
 export default shortestPath;
