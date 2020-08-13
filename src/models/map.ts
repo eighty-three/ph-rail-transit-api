@@ -1,33 +1,12 @@
-//const trainMap = {
-//A: {B: 10},
-//B: {A: 10, C: 50, F: 50},
-//C: {B: 50, D: 20, E: 50, F: 50},
-//D: {C: 20},
-//E: {C: 50, F: 50},
-//F: {B: 50, C: 60, E: 50, G: 40},
-//G: {F: 40}
-//};
-
-const map = {
-  S: {A: 2, C: 1},
-  A: {S: 2, B: 1},
-  B: {A: 1, D: 1},
-  C: {S: 1, E: 100},
-  D: {B: 1, E: 1},
-  E: {C: 100, D: 1, X: 5},
-  X: {E: 5}
+const getMap = () => { //Hardcoded as explained in the README
+  return {
+    BACLARAN: {EDSA_TAFT: 0.58},
+    EDSA_TAFT: {BACLARAN: 0.58, DJOSE_RECTO: 7.80, ARANETA_CUBAO: 12.6},
+    DJOSE_RECTO: {EDSA_TAFT: 7.80, ARANETA_CUBAO: 8.16, ROOSEVELT: 9.65},
+    ROOSEVELT: {DJOSE_RECTO: 9.65, NORTHAVE: 2},
+    ARANETA_CUBAO: {EDSA_TAFT: 12.60, DJOSE_RECTO: 8.16, NORTHAVE: 4.1, LRT2SANTOLAN: 4.35},
+    NORTH_AVE: {ROOSEVELT: 2, ARANETA_CUBAO: 4.1},
+    LRT2SANTOLAN: {ARANETA_CUBAO: 4.35}
+  };
 };
-
-//const map = {
-//A: {B: 10, D: 1},
-//B: {A: 10, C: 50, F: 50, AA: 100},
-//C: {B: 50, D: 20, E: 50, F: 50, AA: 100},
-//D: {C: 20},
-//E: {F: 5, C: 50, XD: 100, XC: 100},
-//F: {E: 5, XC: 20, B: 50, C: 60, G: 40, XD: 100},
-//G: {F: 40},
-//AA: {B: 100, C: 100},
-//XD: {E: 100, F: 100},
-//XC: {F: 20, E: 100}
-//};
-export default map;
+export default getMap;
