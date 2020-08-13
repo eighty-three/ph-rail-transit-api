@@ -1,7 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
-import getRoute from './shortestRoute';
-router.get('/examplex', getRoute);
+import getRoute from './route';
+import validateStationQuery from './route.schema';
+router.get('/getRoute', validateStationQuery, getRoute);
 
 export default router;
