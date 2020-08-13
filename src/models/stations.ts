@@ -9,11 +9,6 @@ export const checkStation = async (
   argStationBranchTable: string = stationBranchTable, 
   argBranchesTable: string = branchesTable, 
 ) => {
-  /*
-   * Returns user_id_followed if 
-   * followerUsername's user_id = user_id_follower AND
-   * followedUsername's user_id = user_id_followed
-   * * */
   return await db.oneOrNone( 
     'SELECT sb.branch_id, distance_to_branch_start, distance_to_branch_end, branch_start, branch_end from $2:alias s \
     INNER JOIN $3:alias sb ON sb.station_id = s.station_id \
