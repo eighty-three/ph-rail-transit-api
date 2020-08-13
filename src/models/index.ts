@@ -1,4 +1,5 @@
 import shortestRoute from './shortestRoute';
-import map from './map';
+import getMap from './map';
+import { checkStation, getStations } from './stations';
 
-export { shortestRoute, map };
+export { shortestRoute, getMap, checkStation, getStations };
