@@ -1,7 +1,7 @@
 # PH Rail Transit API
 An API that shows you the fastest route between two given stations (no frontend yet)
 
-This project is my attempt at applying Dijkstra's algorithm to a problem. I do not plan on working on it too much (or at all anymore) because it completed its sole purpose. However, I at least tried to understand how to make it "scalable" both in the sense that it should be easy to add new stations if ever necessary, and of course with regards to its efficiency.
+This project is my attempt at applying Dijkstra's algorithm to a problem. Its purpose is solely that so updates shouldn't be expected. However, I at least tried to understand how to make it "scalable" both in the sense that it should be easy to add new stations if ever necessary, and of course with regards to its efficiency.
 
 I tried this implementation instead of just running Dijkstra through the raw dataset because I wanted to figure out a way of optimizing it. Considering the way rail transits work, since they rarely change directions except on stations where you can go to a different line, I tried treating them as one `edge`, where the `vertex` would be the stations mentioned. This way, instead of querying the database to get the information of 50 or so train stations, in this specific situation, you'd only need to get 7 branches (that I just hardcoded in this project, see `map.ts`), and the information (to fix the adjacency list/`graph`) of the two queried stations.
 
