@@ -14,7 +14,7 @@ const getRoute: RequestHandler = async (req, res) => {
   const endStationBranch = await checkStation(end); // or returns nothing if intersection
   const map: IGraph = getMap();
 
-  if (startStationBranch?.branch_id === endStationBranch?.branch_id) { // if queried stations are in the same branch
+  if (startStationBranch && startStationBranch.branch_id === endStationBranch.branch_id) { // if queried stations are in the same branch
     /* If TAYUMAN to BAMBANG
      * TAYUMAN: {BAMBANG: someDistance}
      * BAMBANG: {TAYUMAN: someDistance}
@@ -53,7 +53,6 @@ const getRoute: RequestHandler = async (req, res) => {
        * DJOSE_RECTO: {TAYUMAN: someDistance}
        * ROOSEVELT: {TAYUMAN: someDistance}
        */
-
       delete map[startStationBranch.branch_start][startStationBranch.branch_end];
       delete map[startStationBranch.branch_end][startStationBranch.branch_start];
       map[start] = {
