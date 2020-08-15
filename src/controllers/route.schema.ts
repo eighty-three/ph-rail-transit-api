@@ -4,7 +4,6 @@ import { RequestHandler } from 'express';
 
 const validateStationQuery: RequestHandler = async (req, res, next) => {
   const arr = await getStations();
-  console.log(arr);
 
   const routeSchema = Joi.object({
     start: Joi.string().valid(...arr).required(),
