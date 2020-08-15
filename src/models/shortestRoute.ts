@@ -9,7 +9,7 @@ interface IResult {
   paths: string[]
 }
 
-const shortestRoute = (graph: IGraph, start: string, end: string): IResult => {
+const shortestPath = (graph: IGraph, start: string, end: string): IResult => {
   const distance: { [key: string]: number } = {};
   const paths: { [key: string]: string } = {};
   const visited: string[] = [];
@@ -73,4 +73,4 @@ const shortestRoute = (graph: IGraph, start: string, end: string): IResult => {
   return {distance: roundedDistance, paths: endPath.reverse().concat(end)};
 };
 
-export default shortestRoute;
+export default shortestPath;
