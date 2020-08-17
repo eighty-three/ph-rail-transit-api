@@ -28,4 +28,9 @@ describe('for getting all stations', () => {
     const stationsList = await stations.getStations();
     expect(stationsList.length).toStrictEqual(41);
   });
+
+  test('should correct stations', async () => {
+    const stationsList = await stations.getStations();
+    expect(stationsList).toEqual(expect.arrayContaining(['LIBERTAD', 'MAGALLANES', 'KAMUNING', 'VMAPA', 'BALINTAWAK']));
+  });
 });
