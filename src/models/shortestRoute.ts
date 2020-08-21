@@ -1,13 +1,4 @@
-interface IGraph {
-  [key: string]: {
-    [key: string]: number
-  }
-}
-
-interface IResult {
-  distance: number,
-  paths: string[]
-}
+import { IGraph, IResult } from './shortestRoute.types';
 
 const shortestRoute = (graph: IGraph, start: string, end: string): IResult => {
   const distance: { [key: string]: number } = {};
