@@ -14,7 +14,7 @@ app.use(middleware.requestLogger);
 
 //Routes
 import router from './controllers';
-app.use('/api', router);
+app.use('/api/railTransit', router);
 
 //Error handler
 app.use(middleware.unknownEndpoint);
