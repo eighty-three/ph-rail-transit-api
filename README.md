@@ -15,7 +15,7 @@ Since I haven't made a half-decent frontend just yet, you'll just have to query 
 ```
 getRoute?start=${STARTSTATION}&end=${ENDSTATION}
 
-e.g. https://eighty-three.dev/api/getRoute?start=BALINTAWAK&end=GUADALUPE
+e.g. https://eighty-three.dev/api/railTransit/getRoute?start=BALINTAWAK&end=GUADALUPE
 ```
 Check the [page](https://eighty-three.dev/projects/ph-rail-transit-api/) or the [repo](database/stations_list) for the list of stations
 
