@@ -1,0 +1,8 @@
+INSERT INTO branches (branch_start, branch_end) VALUES ('BACLARAN', 'EDSA_TAFT');
+INSERT INTO branches (branch_start, branch_end) VALUES ('EDSA_TAFT', 'DJOSE_RECTO');
+INSERT INTO branches (branch_start, branch_end) VALUES ('DJOSE_RECTO', 'ROOSEVELT');
+INSERT INTO branches (branch_start, branch_end) VALUES ('ROOSEVELT', 'NORTHAVE');
+INSERT INTO branches (branch_start, branch_end) VALUES ('EDSA_TAFT', 'ARANETA_CUBAO');
+INSERT INTO branches (branch_start, branch_end) VALUES ('ARANETA_CUBAO', 'NORTHAVE');
+INSERT INTO branches (branch_start, branch_end) VALUES ('DJOSE_RECTO', 'ARANETA_CUBAO');
+INSERT INTO branches (branch_start, branch_end) VALUES ('ARANETA_CUBAO', 'LRT2SANTOLAN');
